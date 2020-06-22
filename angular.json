@@ -66,7 +66,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "slice-pipe-strict-templates:build"
+            "browserTarget": "slice-pipe-strict-templates:build",
+            "port": 4202
           },
           "configurations": {
             "production": {
