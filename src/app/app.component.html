@@ -1,18 +1,7 @@
-<cdk-virtual-scroll-viewport [itemSize]="18 * 7" class="example-viewport">
-  <div *cdkVirtualFor="let user of users;
-                       let index = index;
-                       let count = count;
-                       let first = first;
-                       let last = last;
-                       let even = even;
-                       let odd = odd;">
-<!--    <span *ngFor="let organization of sliceOrganizations(user.organizations)">-->
-    <span *ngFor="let organization of user.organizations | slice: 0:5">
-        <button class="btn badge pull-left"
-                [attr.sf-organization-badge]="true"
-                (click)="organizationClick(organization.id)">
-            {{organization.id}}
-        </button>
-    </span>
-  </div>
-</cdk-virtual-scroll-viewport>
+<div *ngFor="let user of users;">
+  <span *ngFor="let organization of user.organizations | slice: 0:5">
+      <button class="btn badge pull-left" (click)="organizationClick(organization.id)">
+          {{organization.id}}
+      </button>
+  </span>
+</div>
