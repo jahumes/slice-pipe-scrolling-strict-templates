@@ -15,6 +15,10 @@ export class AppComponent {
     organizations: Organization[]
   }[];
 
+  user: {
+    organizations: Organization[]
+  };
+
   organizationClick(id: any) {
 
   }
